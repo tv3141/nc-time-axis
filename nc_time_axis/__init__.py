@@ -234,7 +234,7 @@ class NetCDFTimeConverter(mdates.DateConverter):
             if len(calendars) == 1:
                 calendar = calendars.pop()
             else:
-                raise ValueError('Calendar units are not all equal: ' + calendars)
+                raise ValueError('Calendar units are not all equal: ' + str(calendars))
         else:
             # Deal with a single `sample_point` value.
             if not hasattr(sample_point, 'calendar'):
